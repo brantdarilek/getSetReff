@@ -53,12 +53,13 @@ function getSetReff()
     var __cmp = "utm_campaign";
     var __mdm = "utm_medium";
     var __srcs = "utm_source";
-
+    var __term = "utm_term";
+    var __cont = "utm_content";
 
     //referrer or params?
-    if (document.location.search.indexOf(__cmp) != -1 || document.location.search.indexOf(__mdm) != -1 || document.location.search.indexOf(__srcs) != -1)
+    if (document.location.search.indexOf(__cmp) != -1 || document.location.search.indexOf(__mdm) != -1 || document.location.search.indexOf(__srcs) != -1 || document.location.search.indexOf(__term) != -1 || document.location.search.indexOf(__cont) != -1)
     {
-        __gsr = "//campaign::c:["+gcP(__cmp)+"]m:["+gcP(__mdm)+"]s:["+gcP(__srcs)+"]";
+        __gsr = "//campaign::c:["+gcP(__cmp)+"]m:["+gcP(__mdm)+"]s:["+gcP(__srcs)+"]t:["+gcP(__term)+"]cn:["+gcP(__cont)+"]";
     }
     else { __gsr = document.referrer; }
     //console.log(__gsr);
